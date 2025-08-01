@@ -42,10 +42,6 @@ function(fetch name url tag)
             target_include_directories(${local_alias} INTERFACE "${root}")
         endif()
     endif()
-
-    # --- 5. Link consumer to the alias and expose result
-    # target_link_libraries (${consumer} PRIVATE ${local_alias})
-    # set(${name}_ALIAS ${local_alias} PARENT_SCOPE)
 endfunction()
 
 set (platform_libs)
